@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sneha Jadhav | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Sneha Jadhav – Web Developer, UI/UX Designer & SEO Specialist based in Bengaluru, India. 35+ live websites delivered."/>
+<title>Sneha Jadhav | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
-
-<body id="home">
+<body>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" id="home">
   <div class="logo">Sneha<span>.</span></div>
-  <nav class="nav">
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav" id="mainNav">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
@@ -25,111 +27,189 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content reveal">
+  <div class="hero-text reveal">
+    <div class="eyebrow">Available for work</div>
     <h1>Sneha Jadhav</h1>
-    <h3>Web Developer • UI/UX Designer • SEO Specialist</h3>
-    <p>
+    <div class="hero-sub">Web Developer &bull; UI/UX Designer &bull; SEO Specialist</div>
+    <p class="hero-desc">
       I design and develop modern, responsive websites with a strong focus on
-      user experience, performance, and SEO.
+      user experience, performance, and SEO. 35+ live websites delivered.
     </p>
+    <div class="hero-btns">
+      <a href="assets/Sneha_Jadhav_Resume.pdf" class="btn btn-primary" download>Download Resume</a>
+      <a href="#projects" class="btn btn-outline">View Projects</a>
+    </div>
+  </div>
 
-    <div class="hero-buttons">
-      <a href="assets/Sneha_Jadhav_Resume.pdf" class="btn primary" download>
-        Download Resume
-      </a>
-      <a href="#projects" class="btn outline">View Projects</a>
+  <div class="hero-card reveal">
+    <div class="card-tag">Core Skills</div>
+    <div class="card-label">Technologies</div>
+    <div class="skill-pills">
+      <span class="pill"><span class="pill-dot"></span>WordPress</span>
+      <span class="pill"><span class="pill-dot"></span>Figma</span>
+      <span class="pill"><span class="pill-dot"></span>Shopify</span>
+      <span class="pill"><span class="pill-dot"></span>Wix</span>
+      <span class="pill"><span class="pill-dot"></span>HTML/CSS/JS</span>
+      <span class="pill"><span class="pill-dot"></span>SEO</span>
+    </div>
+    <div class="stats-row">
+      <div>
+        <div class="stat-num">2+</div>
+        <div class="stat-label">Years Exp.</div>
+      </div>
+      <div>
+        <div class="stat-num">35+</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div>
+        <div class="stat-num">2</div>
+        <div class="stat-label">Companies</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section reveal">
-  <h2>About Me</h2>
-  <p class="section-text">
-    Passionate Web Developer & UI/UX Designer with 2+ years of experience
-    creating SEO-friendly, high-performance websites using WordPress,
-    HTML, CSS, JavaScript, Shopify & Wix.
-  </p>
+<section class="section" id="about">
+  <div class="section-header reveal">
+    <span class="s-num">01</span>
+    <h2 class="s-title">About Me</h2>
+  </div>
+  <div class="about-grid reveal">
+    <div>
+      <p class="about-p">
+        Passionate <strong>Web Developer &amp; UI/UX Designer</strong> with 2+ years of experience
+        delivering SEO-friendly, high-performance websites across multiple industries —
+        from corporate &amp; e-commerce to education, healthcare, and real estate.
+      </p>
+      <p class="about-p">
+        Based in <strong>Bengaluru, India</strong>, I've built <strong>35+ live websites</strong>
+        using WordPress, Shopify, Wix, and custom HTML/CSS/JS, with a strong focus on
+        <strong>Core Web Vitals</strong>, accessibility, and conversion optimization.
+      </p>
+    </div>
+    <div>
+      <div class="tags-label">Technologies &amp; Tools</div>
+      <div class="skill-tags">
+        <span class="skill-tag">WordPress</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Shopify</span>
+        <span class="skill-tag">Wix</span>
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">SEO</span>
+        <span class="skill-tag">Core Web Vitals</span>
+        <span class="skill-tag">Google Analytics</span>
+        <span class="skill-tag">APIs</span>
+        <span class="skill-tag">Performance Optimization</span>
+        <span class="skill-tag">Website Migration</span>
+        <span class="skill-tag">Hosting</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section reveal">
-  <h2>Experience</h2>
-
-  <div class="experience-grid">
-    <div class="experience-card">
-      <h3>Web Developer – Digital Pitha</h3>
-      <span>May 2025 – Present | Bengaluru</span>
-      <ul>
+<section class="section" id="experience">
+  <div class="section-header reveal">
+    <span class="s-num">02</span>
+    <h2 class="s-title">Experience</h2>
+  </div>
+  <div class="exp-grid reveal">
+    <div class="exp-card">
+      <div class="exp-role">Web Developer</div>
+      <div class="exp-co">Digital Pitha</div>
+      <div class="exp-date">May 2025 – Present &middot; Bengaluru</div>
+      <ul class="exp-list">
         <li>Developed responsive WordPress websites</li>
         <li>Designed UI/UX layouts using Figma</li>
-        <li>Improved Core Web Vitals & SEO</li>
-        <li>Customized Shopify & Wix websites</li>
-        <li>Integrated APIs & analytics</li>
+        <li>Improved Core Web Vitals &amp; SEO scores</li>
+        <li>Customized Shopify &amp; Wix websites</li>
+        <li>Integrated APIs &amp; analytics tools</li>
       </ul>
     </div>
-
-    <div class="experience-card">
-      <h3>Web Developer – Shanthatech</h3>
-      <span>Dec 2023 – Apr 2025 | Bengaluru</span>
-      <ul>
-        <li>HTML, CSS & JS UI components</li>
-        <li>WordPress security & plugins</li>
-        <li>Website migration & hosting</li>
-        <li>Speed & browser optimization</li>
-        <li>SEO & UI enhancements</li>
+    <div class="exp-card">
+      <div class="exp-role">Web Developer</div>
+      <div class="exp-co">Shanthatech</div>
+      <div class="exp-date">Dec 2023 – Apr 2025 &middot; Bengaluru</div>
+      <ul class="exp-list">
+        <li>Built HTML, CSS &amp; JS UI components</li>
+        <li>Managed WordPress security &amp; plugins</li>
+        <li>Handled website migration &amp; hosting</li>
+        <li>Optimized speed &amp; browser performance</li>
+        <li>Enhanced SEO &amp; UI/UX quality</li>
       </ul>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section reveal">
-  <h2>Projects</h2>
-
-  <div class="projects-grid">
-    <div class="project-card">
-      <h3>Corporate Website</h3>
-      <p>SEO-optimized responsive business website.</p>
+<section class="section" id="projects">
+  <div class="section-header reveal">
+    <span class="s-num">03</span>
+    <h2 class="s-title">Projects</h2>
+  </div>
+  <div class="reveal">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="ftab active" data-cat="all">All</button>
+      <button class="ftab" data-cat="corporate">Corporate</button>
+      <button class="ftab" data-cat="ecommerce">E-Commerce</button>
+      <button class="ftab" data-cat="tech">Tech</button>
+      <button class="ftab" data-cat="education">Education</button>
+      <button class="ftab" data-cat="construction">Construction</button>
+      <button class="ftab" data-cat="other">Other</button>
     </div>
-
-    <div class="project-card">
-      <h3>UI/UX Landing Page</h3>
-      <p>Modern Figma-based landing page design.</p>
-    </div>
-
-    <div class="project-card">
-      <h3>E-Commerce Website</h3>
-      <p>Shopify store with performance improvements.</p>
-    </div>
+    <p class="proj-count" id="projCount"><strong>32</strong> live websites</p>
+    <div class="proj-grid" id="projGrid"></div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section reveal">
-  <h2>Contact Me</h2>
-
-  <div class="contact-box">
-    <p>📍 Bengaluru, India</p>
-    <p>📧 <a href="mailto:sj411692@gmail.com">sj411692@gmail.com</a></p>
-
-    <div class="social-links">
-      <a href="https://github.com/jsneha9321" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/sneha-jadhav-676390259" target="_blank">LinkedIn</a>
-      <a href="https://www.naukri.com/" target="_blank">Naukri</a>
+<section class="section" id="contact">
+  <div class="section-header reveal">
+    <span class="s-num">04</span>
+    <h2 class="s-title">Contact</h2>
+  </div>
+  <div class="contact-inner reveal">
+    <div>
+      <div class="contact-headline">Let's build something <span>great</span> together.</div>
+      <p class="contact-sub">
+        Open to freelance projects, full-time roles, and collaborations in
+        web development and UI/UX design.
+      </p>
+    </div>
+    <div class="contact-links">
+      <div>
+        <div class="cl-label">Location</div>
+        <div class="cl-val">Bengaluru, India</div>
+      </div>
+      <div>
+        <div class="cl-label">Email</div>
+        <div class="cl-val">
+          <a href="mailto:sj411692@gmail.com">sj411692@gmail.com</a>
+        </div>
+      </div>
+      <div>
+        <div class="cl-label">Find me on</div>
+        <div class="soc-row">
+          <a href="https://github.com/jsneha9321" target="_blank" rel="noopener" class="soc-btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/sneha-jadhav-676390259" target="_blank" rel="noopener" class="soc-btn">LinkedIn</a>
+          <a href="https://www.naukri.com/" target="_blank" rel="noopener" class="soc-btn">Naukri</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Sneha Jadhav | Designed with ❤️</p>
+  <div class="footer-logo">Sneha<span>.</span></div>
+  <div class="footer-copy">© 2025 Sneha Jadhav &middot; Designed with ❤️</div>
 </footer>
 
 <!-- FLOATING RESUME BUTTON -->
-<a href="assets/Sneha_Jadhav_Resume.pdf" class="resume-btn" download>
-  Resume
-</a>
+<a href="assets/Sneha_Jadhav_Resume.pdf" class="resume-fab" download>Resume ↓</a>
 
 <script src="script.js"></script>
 </body>
