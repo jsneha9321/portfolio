@@ -1,102 +1,234 @@
 
+/* =========================================================
+   WEB WONDER PORTFOLIO — COMPLETE SCRIPT.JS
+   Includes: Project filtering, Personal Projects, animations,
+   mobile navigation, scroll effects, and contact form.
+========================================================= */
+
+
 /* ===== CONTACT FORM SETTINGS =====
-   To receive messages straight in your inbox, create a free form at
-   formspree.io using sj411692@gmail.com, then paste your endpoint below.
-   Leave it empty and the form opens the visitor's email app instead.
+   Create a free form at https://formspree.io
+   Replace the empty string with your Formspree endpoint.
+   If left empty, the visitor's email app will open instead.
 */
 const FORM_ENDPOINT = '';
 
+
 /* ===== PROJECT DATA ===== */
 const PROJECTS = [
-  { name: "Koda", url: "koda.co.in", href: "https://koda.co.in/", cat: "koda" },
-  { name: "Cloud Kinetics", url: "cloud-kinetics.com", href: "https://www.cloud-kinetics.com/", cat: "koda" },
-  { name: "MeritTrac", url: "merittrac.com", href: "http://merittrac.com/", cat: "koda" },
-  { name: "Greytt.ai", url: "greytt.ai", href: "https://greytt.ai/", cat: "koda" },
-  { name: "OneConsent", url: "oneconsent.ai", href: "https://oneconsent.ai/", cat: "koda" },
-  { name: "Entermind", url: "entermind.com", href: "https://entermind.com/", cat: "koda" },
+  // Koda client projects
+  {
+    name: "Koda",
+    url: "koda.co.in",
+    href: "https://koda.co.in/",
+    cat: "koda"
+  },
+  {
+    name: "Cloud Kinetics",
+    url: "cloud-kinetics.com",
+    href: "https://www.cloud-kinetics.com/",
+    cat: "koda"
+  },
+  {
+    name: "MeritTrac",
+    url: "merittrac.com",
+    href: "http://merittrac.com/",
+    cat: "koda"
+  },
+  {
+    name: "Greytt.ai",
+    url: "greytt.ai",
+    href: "https://greytt.ai/",
+    cat: "koda"
+  },
+  {
+    name: "OneConsent",
+    url: "oneconsent.ai",
+    href: "https://oneconsent.ai/",
+    cat: "koda"
+  },
+  {
+    name: "Entermind",
+    url: "entermind.com",
+    href: "https://entermind.com/",
+    cat: "koda"
+  },
 
-  { name: "Carltrix", url: "carltrix.com", href: "http://carltrix.com", cat: "corporate" },
-  { name: "Ellex-i", url: "ellex-i.com", href: "http://ellex-i.com", cat: "corporate" },
-  { name: "Essbee Agrotek", url: "essbeeagrotek.in", href: "http://essbeeagrotek.in", cat: "corporate" },
-  { name: "Ergoline", url: "ergoline.co.in", href: "http://ergoline.co.in", cat: "corporate" },
-  { name: "Windscape", url: "windscape.in", href: "http://windscape.in", cat: "corporate" },
-  { name: "Unique Guardz", url: "uniqueguardz.com", href: "https://uniqueguardz.com/", cat: "corporate" },
+  // Corporate websites
+  {
+    name: "Carltrix",
+    url: "carltrix.com",
+    href: "http://carltrix.com",
+    cat: "corporate"
+  },
+  {
+    name: "Ellex-i",
+    url: "ellex-i.com",
+    href: "http://ellex-i.com",
+    cat: "corporate"
+  },
+  {
+    name: "Essbee Agrotek",
+    url: "essbeeagrotek.in",
+    href: "http://essbeeagrotek.in",
+    cat: "corporate"
+  },
+  {
+    name: "Ergoline",
+    url: "ergoline.co.in",
+    href: "http://ergoline.co.in",
+    cat: "corporate"
+  },
+  {
+    name: "Windscape",
+    url: "windscape.in",
+    href: "http://windscape.in",
+    cat: "corporate"
+  },
+  {
+    name: "Unique Guardz",
+    url: "uniqueguardz.com",
+    href: "https://uniqueguardz.com/",
+    cat: "corporate"
+  },
 
-  { name: "Inbox Haircare", url: "inboxhaircare.com", href: "http://inboxhaircare.com", cat: "ecommerce" },
-  { name: "Tanu Silks", url: "tanusilks.com", href: "https://tanusilks.com/", cat: "ecommerce" },
+  // E-commerce websites
+  {
+    name: "Inbox Haircare",
+    url: "inboxhaircare.com",
+    href: "http://inboxhaircare.com",
+    cat: "ecommerce"
+  },
+  {
+    name: "Tanu Silks",
+    url: "tanusilks.com",
+    href: "https://tanusilks.com/",
+    cat: "ecommerce"
+  },
 
-  { name: "Kale Indian Film Academy", url: "kaleindianfilmacademy.com", href: "http://kaleindianfilmacademy.com", cat: "education" },
-  { name: "Medical Education World", url: "medicaleducationworld.com", href: "https://medicaleducationworld.com/", cat: "education" },
-  { name: "IESC India", url: "iescindia.com", href: "https://iescindia.com/", cat: "education" },
+  // Education websites
+  {
+    name: "Kale Indian Film Academy",
+    url: "kaleindianfilmacademy.com",
+    href: "http://kaleindianfilmacademy.com",
+    cat: "education"
+  },
+  {
+    name: "Medical Education World",
+    url: "medicaleducationworld.com",
+    href: "https://medicaleducationworld.com/",
+    cat: "education"
+  },
+  {
+    name: "IESC India",
+    url: "iescindia.com",
+    href: "https://iescindia.com/",
+    cat: "education"
+  },
 
-  { name: "Shantha Ventures", url: "shanthaventures.com", href: "https://shanthaventures.com/", cat: "other" },
-  { name: "Group Unnati", url: "groupunnati.com", href: "https://groupunnati.com/", cat: "other" },
-  { name: "Public Documents Service", url: "publicdocumentsservice.com", href: "http://publicdocumentsservice.com", cat: "other" },
-  { name: "Mahatirtha Yatras", url: "mahatirthayatras.com", href: "https://mahatirthayatras.com/", cat: "other" },
+  // Other websites
+  {
+    name: "Shantha Ventures",
+    url: "shanthaventures.com",
+    href: "https://shanthaventures.com/",
+    cat: "other"
+  },
+  {
+    name: "Group Unnati",
+    url: "groupunnati.com",
+    href: "https://groupunnati.com/",
+    cat: "other"
+  },
+  {
+    name: "Public Documents Service",
+    url: "publicdocumentsservice.com",
+    href: "http://publicdocumentsservice.com",
+    cat: "other"
+  },
+  {
+    name: "Mahatirtha Yatras",
+    url: "mahatirthayatras.com",
+    href: "https://mahatirthayatras.com/",
+    cat: "other"
+  },
 
-  /* ===== NEW PERSONAL PROJECT: SMART LEADS ===== */
+  // Personal project: Smart Leads WordPress Plugin
   {
     name: "Smart Leads WordPress Plugin",
     url: "github.com/jsneha9321/smart-leads-wordpress-plugin",
     href: "https://github.com/jsneha9321/smart-leads-wordpress-plugin/",
     cat: "personal",
-    description: "A custom WordPress plugin featuring lead management, admin CRUD operations, a frontend lead form, and REST API integration.",
+    description:
+      "A custom WordPress plugin featuring lead management, admin CRUD operations, a frontend lead form, and REST API integration.",
     action: "View source code"
   }
 ];
 
+
 /* ===== USER PREFERENCES ===== */
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const fine = matchMedia('(hover:hover)').matches;
+const reduce = window.matchMedia(
+  '(prefers-reduced-motion: reduce)'
+).matches;
+
+const fine = window.matchMedia(
+  '(hover: hover)'
+).matches;
+
 
 /* ===== WEBSITE SCREENSHOT HELPERS ===== */
 const shotUrl = (href, w, h) =>
   `https://s0.wp.com/mshots/v1/${encodeURIComponent(href)}?w=${w}&h=${h}`;
 
-const thumb = (p, w, h) => `
-  <div class="thumb" data-i="${p.name[0]}">
+const thumb = (project, width, height) => `
+  <div class="thumb" data-i="${project.name[0]}">
     <img
-      src="${shotUrl(p.href, w, h)}"
-      alt=""
+      src="${shotUrl(project.href, width, height)}"
+      alt="Website preview of ${project.name}"
       loading="lazy"
       onerror="this.remove()"
     >
   </div>
 `;
 
+
 /* ===== HERO WALL ===== */
 (function () {
   const wall = document.getElementById('wall');
+
   if (!wall) return;
 
   const half = Math.ceil(PROJECTS.length / 2);
 
-  [PROJECTS.slice(0, half), PROJECTS.slice(half)].forEach((list, i) => {
-    const cards = list.map(p => `
-      <a
-        class="shot"
-        href="${p.href}"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="${p.name}"
-        tabindex="-1"
-      >
-        ${thumb(p, 600, 900)}
-      </a>
-    `).join('');
+  [PROJECTS.slice(0, half), PROJECTS.slice(half)].forEach(
+    (projectList, index) => {
+      const cards = projectList.map(project => `
+        <a
+          class="shot"
+          href="${project.href}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="${project.name}"
+          tabindex="-1"
+        >
+          ${thumb(project, 600, 900)}
+        </a>
+      `).join('');
 
-    wall.insertAdjacentHTML(
-      'beforeend',
-      `<div class="track${i ? ' rev' : ''}">${cards}${cards}</div>`
-    );
-  });
+      wall.insertAdjacentHTML(
+        'beforeend',
+        `<div class="track${index ? ' rev' : ''}">${cards}${cards}</div>`
+      );
+    }
+  );
 })();
 
-/* ===== PROJECT GRID + FILTER ===== */
+
+/* ===== PROJECT GRID AND CATEGORY FILTER ===== */
 const grid = document.getElementById('grid');
 const tabs = document.getElementById('tabs');
 
-/* Return the category badge for each project. */
+
+/* Category names displayed on project cards */
 function getCategoryLabel(category) {
   const labels = {
     koda: 'Koda client',
@@ -110,54 +242,65 @@ function getCategoryLabel(category) {
   return labels[category] || 'Website project';
 }
 
-/* Display the selected project cards. */
-function render(cat) {
+
+/* Render the selected project cards */
+function render(category) {
   if (!grid) return;
 
-  const list = cat === 'all'
+  const projects = category === 'all'
     ? PROJECTS
-    : PROJECTS.filter(p => p.cat === cat);
+    : PROJECTS.filter(project => project.cat === category);
 
-  if (list.length === 0) {
-    grid.innerHTML = '<p class="p">No projects found in this category.</p>';
+  if (projects.length === 0) {
+    grid.innerHTML =
+      '<p class="p">No projects found in this category.</p>';
     return;
   }
 
-  grid.innerHTML = list.map((p, i) => `
+  grid.innerHTML = projects.map((project, index) => `
     <a
       class="card"
       data-tilt
-      href="${p.href}"
+      href="${project.href}"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="${p.name}: ${p.action || 'Visit website'}"
-      style="animation-delay:${i * 45}ms"
+      aria-label="${project.name}: ${project.action || 'Visit website'}"
+      style="animation-delay:${index * 45}ms"
     >
-      ${thumb(p, 800, 1300)}
+      ${thumb(project, 800, 1300)}
 
       <div class="card-body">
         <div class="card-top">
-          <span class="card-name">${p.name}</span>
-          <span class="badge">${getCategoryLabel(p.cat)}</span>
+          <span class="card-name">${project.name}</span>
+
+          <span class="badge">
+            ${getCategoryLabel(project.cat)}
+          </span>
         </div>
 
-        <span class="card-url">${p.url}</span>
+        <span class="card-url">${project.url}</span>
 
-        ${p.description ? `
-          <p class="project-description">${p.description}</p>
-        ` : ''}
+        ${
+          project.description
+            ? `<p class="project-description">${project.description}</p>`
+            : ''
+        }
 
-        <span class="visit">${p.action || 'Visit site'} ↗</span>
+        <span class="visit">
+          ${project.action || 'Visit site'} ↗
+        </span>
       </div>
     </a>
   `).join('');
 }
 
-/* Handle clicks on the category tabs. */
+
+/* Handle category tab clicks */
 if (tabs) {
-  tabs.addEventListener('click', e => {
-    const button = e.target.closest('.tab');
-    if (!button) return;
+  tabs.addEventListener('click', event => {
+    const button = event.target.closest('.tab');
+
+    if (!button || !tabs.contains(button)) return;
 
     tabs.querySelectorAll('.tab').forEach(tab => {
       tab.classList.remove('active');
@@ -171,39 +314,44 @@ if (tabs) {
   });
 }
 
-/* Show all projects when the page first loads. */
+
+/* Show all projects on initial page load */
 render('all');
 
-/* ===== SPLIT TEXT: HERO LETTERS + HEADING WORDS ===== */
+
+/* ===== SPLIT TEXT: HERO LETTERS AND HEADING WORDS ===== */
 (function () {
   const name = document.getElementById('heroName');
-  if (!name) return;
 
-  const txt = name.textContent;
+  if (name) {
+    const text = name.textContent;
 
-  name.innerHTML = [...txt].map((c, i) =>
-    c === ' '
-      ? ' '
-      : `<span class="ch" style="--i:${i}" aria-hidden="true">${c}</span>`
-  ).join('');
+    name.innerHTML = [...text].map((character, index) =>
+      character === ' '
+        ? ' '
+        : `<span class="ch" style="--i:${index}" aria-hidden="true">${character}</span>`
+    ).join('');
+  }
 
-  document.querySelectorAll('.words').forEach(h => {
-    const label = h.textContent.trim();
+  document.querySelectorAll('.words').forEach(heading => {
+    const label = heading.textContent.trim();
 
-    h.setAttribute('aria-label', label);
+    heading.setAttribute('aria-label', label);
 
-    h.innerHTML = label.split(/\s+/).map((word, i) => `
+    heading.innerHTML = label.split(/\s+/).map((word, index) => `
       <span class="w" aria-hidden="true">
-        <span style="--i:${i}">${word}</span>
+        <span style="--i:${index}">${word}</span>
       </span>
     `).join(' ');
   });
 })();
 
+
 /* ===== TYPED ROLE LINE ===== */
 (function () {
-  const el = document.getElementById('typed');
-  if (!el) return;
+  const element = document.getElementById('typed');
+
+  if (!element) return;
 
   const phrases = [
     'WordPress websites that rank.',
@@ -213,41 +361,45 @@ render('all');
   ];
 
   if (reduce) {
-    el.textContent = phrases[0];
+    element.textContent = phrases[0];
     return;
   }
 
-  let p = 0;
-  let c = 0;
-  let del = false;
+  let phraseIndex = 0;
+  let characterIndex = 0;
+  let deleting = false;
 
-  (function tick() {
-    const s = phrases[p];
+  function tick() {
+    const phrase = phrases[phraseIndex];
 
-    c += del ? -1 : 1;
-    el.textContent = s.slice(0, c);
+    characterIndex += deleting ? -1 : 1;
+    element.textContent = phrase.slice(0, characterIndex);
 
-    let d = del ? 28 : 55;
+    let delay = deleting ? 28 : 55;
 
-    if (!del && c === s.length) {
-      del = true;
-      d = 1800;
-    } else if (del && c === 0) {
-      del = false;
-      p = (p + 1) % phrases.length;
-      d = 350;
+    if (!deleting && characterIndex === phrase.length) {
+      deleting = true;
+      delay = 1800;
+    } else if (deleting && characterIndex === 0) {
+      deleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      delay = 350;
     }
 
-    setTimeout(tick, d);
-  })();
+    window.setTimeout(tick, delay);
+  }
+
+  tick();
 })();
+
 
 /* ===== CODE WINDOW: TYPES ITSELF ===== */
 (function () {
-  const out = document.getElementById('codeOut');
-  if (!out) return;
+  const output = document.getElementById('codeOut');
 
-  const src = `<?php
+  if (!output) return;
+
+  const source = `<?php
 // Custom post type for client work
 add_action('init', function () {
   register_post_type('project', [
@@ -257,178 +409,208 @@ add_action('init', function () {
   ]);
 });`;
 
-  const esc = s => s
+  const escapeHTML = text => text
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 
-  const paint = s => esc(s).replace(
+  const paint = text => escapeHTML(text).replace(
     /(\/\/.*)|('[^']*'?)|\b(add_action|function|register_post_type|true)\b|(=&gt;)/g,
-    (m, c, str, k, o) =>
-      c ? `<span class="c">${m}</span>`
-      : str ? `<span class="s">${m}</span>`
-      : k ? `<span class="k">${m}</span>`
-      : `<span class="o">${m}</span>`
+    (match, comment, string, keyword, operator) =>
+      comment ? `<span class="c">${match}</span>`
+        : string ? `<span class="s">${match}</span>`
+        : keyword ? `<span class="k">${match}</span>`
+        : `<span class="o">${match}</span>`
   );
 
   if (reduce) {
-    out.innerHTML = paint(src);
+    output.innerHTML = paint(source);
     return;
   }
 
-  let i = 0;
+  let index = 0;
 
-  setTimeout(function step() {
-    i++;
-    out.innerHTML = paint(src.slice(0, i));
+  function step() {
+    index++;
+    output.innerHTML = paint(source.slice(0, index));
 
-    if (i < src.length) {
-      setTimeout(step, src[i - 1] === '\n' ? 220 : 24);
+    if (index < source.length) {
+      window.setTimeout(
+        step,
+        source[index - 1] === '\n' ? 220 : 24
+      );
     }
-  }, 1300);
+  }
+
+  window.setTimeout(step, 1300);
 })();
+
 
 /* ===== MOBILE MENU ===== */
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
 
-const setMenu = open => {
+function setMenu(isOpen) {
   if (!nav || !burger) return;
 
-  nav.classList.toggle('open', open);
-  burger.setAttribute('aria-expanded', String(open));
+  nav.classList.toggle('open', isOpen);
+  burger.setAttribute('aria-expanded', String(isOpen));
   burger.setAttribute(
     'aria-label',
-    open ? 'Close menu' : 'Open menu'
+    isOpen ? 'Close menu' : 'Open menu'
   );
-};
+}
 
 if (burger && nav) {
   burger.addEventListener('click', () => {
     setMenu(!nav.classList.contains('open'));
   });
 
-  nav.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => setMenu(false));
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setMenu(false));
   });
 }
+
 
 /* ===== SCROLL REVEAL ===== */
 const revealElements = document.querySelectorAll('.reveal, .words');
 
 if ('IntersectionObserver' in window) {
-  const io = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in');
-        io.unobserve(entry.target);
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, {
+    threshold: 0.12
+  });
 
-  revealElements.forEach(el => {
-    const parent = el.parentElement;
+  revealElements.forEach(element => {
+    const parent = element.parentElement;
 
     if (parent) {
-      const siblings = [...parent.children].filter(
-        child => child.classList.contains('reveal')
+      const siblings = [...parent.children].filter(child =>
+        child.classList.contains('reveal')
       );
 
       if (siblings.length > 2) {
-        el.style.transitionDelay =
-          (siblings.indexOf(el) % 6) * 80 + 'ms';
+        element.style.transitionDelay =
+          (siblings.indexOf(element) % 6) * 80 + 'ms';
       }
     }
 
-    io.observe(el);
+    observer.observe(element);
   });
 } else {
-  revealElements.forEach(el => el.classList.add('in'));
+  revealElements.forEach(element => {
+    element.classList.add('in');
+  });
 }
 
-/* ===== COUNT-UP ===== */
-document.querySelectorAll('[data-count]').forEach(el => {
-  const target = Number(el.dataset.count);
+
+/* ===== COUNT-UP ANIMATIONS ===== */
+document.querySelectorAll('[data-count]').forEach(element => {
+  const target = Number(element.dataset.count);
 
   if (reduce) {
-    el.textContent = target;
+    element.textContent = target;
     return;
   }
 
   const start = performance.now() + 1100;
   const duration = 1500;
 
-  const tick = now => {
-    const t = Math.min(
+  function tick(now) {
+    const progress = Math.min(
       Math.max((now - start) / duration, 0),
       1
     );
 
-    el.textContent = Math.round(
-      target * (1 - Math.pow(1 - t, 3))
+    element.textContent = Math.round(
+      target * (1 - Math.pow(1 - progress, 3))
     );
 
-    if (t < 1) requestAnimationFrame(tick);
-  };
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    }
+  }
 
   requestAnimationFrame(tick);
 });
 
+
 /* ===== SCROLL: PROGRESS, TIMELINE, PARALLAX, ACTIVE NAV ===== */
-const bar = document.getElementById('progress');
-const tl = document.querySelector('.timeline');
+const progressBar = document.getElementById('progress');
+const timeline = document.querySelector('.timeline');
 const hero = document.querySelector('.hero');
 
-const links = [
-  ...document.querySelectorAll('.nav a[href^="#"]:not(.nav-cta)')
+const navLinks = [
+  ...document.querySelectorAll(
+    '.nav a[href^="#"]:not(.nav-cta)'
+  )
 ];
 
-const secs = links.map(a =>
-  document.querySelector(a.getAttribute('href'))
+const sections = navLinks.map(link =>
+  document.querySelector(link.getAttribute('href'))
 );
 
 function onScroll() {
-  const h = document.documentElement;
+  const page = document.documentElement;
 
-  if (bar) {
-    const maxScroll = h.scrollHeight - h.clientHeight;
-    const progress = maxScroll > 0 ? h.scrollTop / maxScroll : 0;
+  if (progressBar) {
+    const maxScroll = page.scrollHeight - page.clientHeight;
+    const progress = maxScroll > 0
+      ? page.scrollTop / maxScroll
+      : 0;
 
-    bar.style.transform = `scaleX(${progress})`;
+    progressBar.style.transform = `scaleX(${progress})`;
   }
 
   if (!reduce && hero) {
-    hero.style.setProperty('--py', window.scrollY * 0.25 + 'px');
+    hero.style.setProperty(
+      '--py',
+      window.scrollY * 0.25 + 'px'
+    );
   }
 
-  if (tl) {
-    const r = tl.getBoundingClientRect();
+  if (timeline) {
+    const rect = timeline.getBoundingClientRect();
 
-    const progress = r.height > 0
+    const progress = rect.height > 0
       ? Math.min(
-          Math.max((window.innerHeight * 0.6 - r.top) / r.height, 0),
+          Math.max(
+            (window.innerHeight * 0.6 - rect.top) / rect.height,
+            0
+          ),
           1
         )
       : 0;
 
-    tl.style.setProperty('--tl', progress * 100 + '%');
+    timeline.style.setProperty('--tl', progress * 100 + '%');
   }
 
-  const y = window.scrollY + window.innerHeight * 0.35;
+  const currentPosition =
+    window.scrollY + window.innerHeight * 0.35;
 
-  secs.forEach((section, i) => {
+  sections.forEach((section, index) => {
     if (!section) return;
 
-    links[i].classList.toggle(
+    navLinks[index].classList.toggle(
       'active',
-      y >= section.offsetTop &&
-      y < section.offsetTop + section.offsetHeight
+      currentPosition >= section.offsetTop &&
+      currentPosition < section.offsetTop + section.offsetHeight
     );
   });
 }
 
-window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('scroll', onScroll, {
+  passive: true
+});
+
 onScroll();
+
 
 /* ===== POINTER EFFECTS: GLOW, RING, TILT, MAGNETIC ===== */
 if (!reduce && fine) {
@@ -436,58 +618,61 @@ if (!reduce && fine) {
   const ring = document.getElementById('ring');
 
   if (glow && ring) {
-    let rx = 0;
-    let ry = 0;
-    let tx = 0;
-    let ty = 0;
+    let ringX = 0;
+    let ringY = 0;
+    let targetX = 0;
+    let targetY = 0;
 
-    (function loop() {
-      rx += (tx - rx) * 0.2;
-      ry += (ty - ry) * 0.2;
+    function animateRing() {
+      ringX += (targetX - ringX) * 0.2;
+      ringY += (targetY - ringY) * 0.2;
 
-      ring.style.transform = `translate(${rx}px,${ry}px)`;
+      ring.style.transform =
+        `translate(${ringX}px, ${ringY}px)`;
 
-      requestAnimationFrame(loop);
-    })();
+      requestAnimationFrame(animateRing);
+    }
+
+    animateRing();
 
     let lastTilt = null;
-    let lastMag = null;
+    let lastMagnet = null;
 
-    const resetTilt = el => {
-      el.style.setProperty('--rx', '0deg');
-      el.style.setProperty('--ry', '0deg');
+    const resetTilt = element => {
+      element.style.setProperty('--rx', '0deg');
+      element.style.setProperty('--ry', '0deg');
     };
 
-    const resetMag = el => {
-      el.style.setProperty('--tx', '0px');
-      el.style.setProperty('--ty', '0px');
+    const resetMagnet = element => {
+      element.style.setProperty('--tx', '0px');
+      element.style.setProperty('--ty', '0px');
     };
 
-    window.addEventListener('pointermove', e => {
+    window.addEventListener('pointermove', event => {
       glow.style.opacity = 1;
       ring.style.opacity = 1;
 
-      glow.style.left = e.clientX + 'px';
-      glow.style.top = e.clientY + 'px';
+      glow.style.left = event.clientX + 'px';
+      glow.style.top = event.clientY + 'px';
 
-      tx = e.clientX;
-      ty = e.clientY;
+      targetX = event.clientX;
+      targetY = event.clientY;
 
       ring.classList.toggle(
         'big',
-        !!e.target.closest('a,button,[data-tilt]')
+        Boolean(event.target.closest('a, button, [data-tilt]'))
       );
 
-      const tilt = e.target.closest('[data-tilt]');
+      const tilt = event.target.closest('[data-tilt]');
 
       if (lastTilt && lastTilt !== tilt) {
         resetTilt(lastTilt);
       }
 
       if (tilt) {
-        const r = tilt.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width;
-        const y = (e.clientY - r.top) / r.height;
+        const rect = tilt.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
 
         tilt.style.setProperty(
           '--ry',
@@ -499,33 +684,44 @@ if (!reduce && fine) {
           ((0.5 - y) * 10).toFixed(2) + 'deg'
         );
 
-        tilt.style.setProperty('--mx', (x * 100).toFixed(1) + '%');
-        tilt.style.setProperty('--my', (y * 100).toFixed(1) + '%');
+        tilt.style.setProperty(
+          '--mx',
+          (x * 100).toFixed(1) + '%'
+        );
+
+        tilt.style.setProperty(
+          '--my',
+          (y * 100).toFixed(1) + '%'
+        );
       }
 
       lastTilt = tilt;
 
-      const magnet = e.target.closest('[data-magnet]');
+      const magnet = event.target.closest('[data-magnet]');
 
-      if (lastMag && lastMag !== magnet) {
-        resetMag(lastMag);
+      if (lastMagnet && lastMagnet !== magnet) {
+        resetMagnet(lastMagnet);
       }
 
       if (magnet) {
-        const r = magnet.getBoundingClientRect();
+        const rect = magnet.getBoundingClientRect();
 
         magnet.style.setProperty(
           '--tx',
-          ((e.clientX - r.left - r.width / 2) * 0.25).toFixed(1) + 'px'
+          (
+            (event.clientX - rect.left - rect.width / 2) * 0.25
+          ).toFixed(1) + 'px'
         );
 
         magnet.style.setProperty(
           '--ty',
-          ((e.clientY - r.top - r.height / 2) * 0.35).toFixed(1) + 'px'
+          (
+            (event.clientY - rect.top - rect.height / 2) * 0.35
+          ).toFixed(1) + 'px'
         );
       }
 
-      lastMag = magnet;
+      lastMagnet = magnet;
     });
 
     document.addEventListener('pointerleave', () => {
@@ -535,52 +731,72 @@ if (!reduce && fine) {
   }
 }
 
+
 /* ===== HERO NETWORK CANVAS ===== */
 (function () {
-  const cv = document.getElementById('net');
+  const canvas = document.getElementById('net');
 
-  if (!cv || reduce || !cv.getContext) return;
+  if (!canvas || reduce || !canvas.getContext) return;
 
-  const ctx = cv.getContext('2d');
-  if (!ctx) return;
+  const context = canvas.getContext('2d');
 
-  let w;
-  let h;
-  let pts = [];
-  let mouse = { x: -999, y: -999 };
-  let on = true;
+  if (!context) return;
+
+  let width = 0;
+  let height = 0;
+  let points = [];
+
+  const mouse = {
+    x: -999,
+    y: -999
+  };
+
+  let visible = true;
   let animationId = null;
 
-  const init = () => {
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  function initialize() {
+    const pixelRatio = Math.min(
+      window.devicePixelRatio || 1,
+      2
+    );
 
-    w = cv.clientWidth;
-    h = cv.clientHeight;
+    width = canvas.clientWidth;
+    height = canvas.clientHeight;
 
-    cv.width = w * dpr;
-    cv.height = h * dpr;
+    canvas.width = width * pixelRatio;
+    canvas.height = height * pixelRatio;
 
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    context.setTransform(
+      pixelRatio,
+      0,
+      0,
+      pixelRatio,
+      0,
+      0
+    );
 
-    const n = Math.round(Math.min(70, (w * h) / 16000));
+    const count = Math.round(
+      Math.min(70, (width * height) / 16000)
+    );
 
-    pts = Array.from({ length: n }, () => ({
-      x: Math.random() * w,
-      y: Math.random() * h,
+    points = Array.from({ length: count }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
       vx: (Math.random() - 0.5) * 0.35,
       vy: (Math.random() - 0.5) * 0.35
     }));
-  };
+  }
 
-  window.addEventListener('resize', init);
-  init();
+  window.addEventListener('resize', initialize);
+
+  initialize();
 
   if (hero) {
-    hero.addEventListener('pointermove', e => {
-      const r = cv.getBoundingClientRect();
+    hero.addEventListener('pointermove', event => {
+      const rect = canvas.getBoundingClientRect();
 
-      mouse.x = e.clientX - r.left;
-      mouse.y = e.clientY - r.top;
+      mouse.x = event.clientX - rect.left;
+      mouse.y = event.clientY - rect.top;
     });
 
     hero.addEventListener('pointerleave', () => {
@@ -590,69 +806,86 @@ if (!reduce && fine) {
   }
 
   if ('IntersectionObserver' in window && hero) {
-    new IntersectionObserver(entries => {
-      on = entries[0].isIntersecting;
+    const observer = new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting;
 
-      if (on && animationId === null) {
+      if (visible && animationId === null) {
         draw();
       }
-    }).observe(hero);
+    });
+
+    observer.observe(hero);
   }
 
   function draw() {
-    if (!on) {
+    if (!visible) {
       animationId = null;
       return;
     }
 
-    ctx.clearRect(0, 0, w, h);
+    context.clearRect(0, 0, width, height);
 
-    for (const p of pts) {
-      p.x += p.vx;
-      p.y += p.vy;
+    for (const point of points) {
+      point.x += point.vx;
+      point.y += point.vy;
 
-      if (p.x < 0 || p.x > w) p.vx *= -1;
-      if (p.y < 0 || p.y > h) p.vy *= -1;
+      if (point.x < 0 || point.x > width) {
+        point.vx *= -1;
+      }
 
-      const dx = mouse.x - p.x;
-      const dy = mouse.y - p.y;
-      const d = Math.hypot(dx, dy);
+      if (point.y < 0 || point.y > height) {
+        point.vy *= -1;
+      }
 
-      if (d < 140) {
-        p.x -= dx * 0.004;
-        p.y -= dy * 0.004;
+      const dx = mouse.x - point.x;
+      const dy = mouse.y - point.y;
+      const distance = Math.hypot(dx, dy);
+
+      if (distance < 140) {
+        point.x -= dx * 0.004;
+        point.y -= dy * 0.004;
       }
     }
 
-    for (let i = 0; i < pts.length; i++) {
-      const a = pts[i];
+    for (let i = 0; i < points.length; i++) {
+      const a = points[i];
 
-      ctx.fillStyle = 'rgba(160,150,255,.7)';
-      ctx.beginPath();
-      ctx.arc(a.x, a.y, 1.6, 0, 6.283);
-      ctx.fill();
+      context.fillStyle = 'rgba(160,150,255,.7)';
+      context.beginPath();
+      context.arc(a.x, a.y, 1.6, 0, 6.283);
+      context.fill();
 
-      for (let j = i + 1; j < pts.length; j++) {
-        const b = pts[j];
-        const d = Math.hypot(a.x - b.x, a.y - b.y);
+      for (let j = i + 1; j < points.length; j++) {
+        const b = points[j];
+        const distance = Math.hypot(
+          a.x - b.x,
+          a.y - b.y
+        );
 
-        if (d < 120) {
-          ctx.strokeStyle = `rgba(124,108,255,${(1 - d / 120) * 0.35})`;
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.stroke();
+        if (distance < 120) {
+          context.strokeStyle =
+            `rgba(124,108,255,${(1 - distance / 120) * 0.35})`;
+
+          context.beginPath();
+          context.moveTo(a.x, a.y);
+          context.lineTo(b.x, b.y);
+          context.stroke();
         }
       }
 
-      const dm = Math.hypot(a.x - mouse.x, a.y - mouse.y);
+      const mouseDistance = Math.hypot(
+        a.x - mouse.x,
+        a.y - mouse.y
+      );
 
-      if (dm < 160) {
-        ctx.strokeStyle = `rgba(255,155,106,${(1 - dm / 160) * 0.5})`;
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(mouse.x, mouse.y);
-        ctx.stroke();
+      if (mouseDistance < 160) {
+        context.strokeStyle =
+          `rgba(255,155,106,${(1 - mouseDistance / 160) * 0.5})`;
+
+        context.beginPath();
+        context.moveTo(a.x, a.y);
+        context.lineTo(mouse.x, mouse.y);
+        context.stroke();
       }
     }
 
@@ -662,9 +895,12 @@ if (!reduce && fine) {
   draw();
 })();
 
+
 /* ===== CLICK SPARKS ===== */
-document.addEventListener('click', e => {
-  if (reduce || !e.target.closest('.btn-solid,.fab')) return;
+document.addEventListener('click', event => {
+  if (reduce || !event.target.closest('.btn-solid, .fab')) {
+    return;
+  }
 
   for (let i = 0; i < 14; i++) {
     const spark = document.createElement('i');
@@ -674,8 +910,8 @@ document.addEventListener('click', e => {
     spark.className = 'spark';
 
     spark.style.cssText = `
-      left:${e.clientX}px;
-      top:${e.clientY}px;
+      left:${event.clientX}px;
+      top:${event.clientY}px;
       --dx:${Math.cos(angle) * distance}px;
       --dy:${Math.sin(angle) * distance}px;
       background:${i % 2 ? '#FF9B6A' : '#7C6CFF'};
@@ -683,50 +919,57 @@ document.addEventListener('click', e => {
 
     document.body.appendChild(spark);
 
-    setTimeout(() => spark.remove(), 700);
+    window.setTimeout(() => spark.remove(), 700);
   }
 });
 
-/* ===== LEAD FORM ===== */
+
+/* ===== CONTACT / LEAD FORM ===== */
 (function () {
   const form = document.getElementById('leadForm');
   const note = document.getElementById('formNote');
 
   if (!form || !note) return;
 
-  const btn = form.querySelector('button[type="submit"]');
-  if (!btn) return;
+  const button = form.querySelector('button[type="submit"]');
 
-  const say = (message, cls) => {
+  if (!button) return;
+
+  const say = (message, className) => {
     note.textContent = message;
-    note.className = 'sm form-note ' + (cls || '');
+    note.className = 'sm form-note ' + (className || '');
   };
 
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
 
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
 
-    const f = new FormData(form);
+    const formData = new FormData(form);
 
-    if (f.get('_gotcha')) return;
+    // Spam honeypot field
+    if (formData.get('_gotcha')) return;
 
     if (FORM_ENDPOINT) {
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
+      button.disabled = true;
+      button.textContent = 'Sending...';
       say('');
 
       try {
         const response = await fetch(FORM_ENDPOINT, {
           method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: f
+          headers: {
+            Accept: 'application/json'
+          },
+          body: formData
         });
 
-        if (!response.ok) throw new Error('Form submission failed');
+        if (!response.ok) {
+          throw new Error('Form submission failed');
+        }
 
         form.reset();
 
@@ -734,28 +977,28 @@ document.addEventListener('click', e => {
           'Thank you! Your message is on its way. I will reply within a day.',
           'ok'
         );
-      } catch (_) {
+      } catch (error) {
         say(
           'Could not send right now. Please email sj411692@gmail.com directly.',
           'err'
         );
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Send message';
       }
-
-      btn.disabled = false;
-      btn.textContent = 'Send message';
     } else {
       const body = `Hi Sneha,
 
-${f.get('msg')}
+${formData.get('msg')}
 
-Name: ${f.get('name')}
-Email: ${f.get('email')}
-Looking for: ${f.get('type')}`;
+Name: ${formData.get('name')}
+Email: ${formData.get('email')}
+Looking for: ${formData.get('type')}`;
+
+      const subject = 'Enquiry: ' + formData.get('type');
 
       window.location.href =
-        `mailto:sj411692@gmail.com?subject=${encodeURIComponent(
-          'Enquiry: ' + f.get('type')
-        )}&body=${encodeURIComponent(body)}`;
+        `mailto:sj411692@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
       say(
         'Opening your email app. If nothing opens, write to sj411692@gmail.com.',
