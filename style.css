@@ -194,7 +194,7 @@ img{display:block;max-width:100%}
 .edu p{color:var(--muted);font-size:.9rem}
 .edu .sm{margin-top:6px;color:var(--coral)}
 .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.cert{padding:22px;background:var(--surf);border:1px solid var(--line);border-radius:var(--r)}
+.cert{padding:22px}
 .cert-date{font:.75rem var(--mono);color:var(--coral)}
 .cert h3{margin:8px 0 4px;font-size:.98rem}
 .cert p{color:var(--muted);font-size:.84rem}
