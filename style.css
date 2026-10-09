@@ -276,3 +276,16 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;bac
 .form .btn[disabled]{opacity:.6;cursor:wait}
 @media(max-width:900px){.code-wrap{display:none}}
 @media(prefers-reduced-motion:reduce){body::before{animation:none}.spark{display:none}}
+
+
+/* ===== PROJECT CARD DESCRIPTION ===== */
+.project-description {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.card .badge {
+  flex-shrink: 0;
+}
