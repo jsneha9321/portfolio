@@ -2,631 +2,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sneha Jadhav | WordPress & Full Stack Web Developer, Bengaluru</title>
+  <title>Sneha Jadhav | WordPress &amp; Full Stack Web Developer, Bengaluru</title>
+  <meta name="description" content="Sneha Jadhav is a WordPress and full stack web developer in Bengaluru building fast, SEO-ready websites. Experience across 35+ live websites. Open to new opportunities and freelance projects.">
+  <meta property="og:title" content="Sneha Jadhav | WordPress &amp; Full Stack Web Developer">
+  <meta property="og:description" content="Fast, SEO-ready WordPress websites. Experience across 35+ live websites. Based in Bengaluru.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0C0B16">
 
-<meta name="description" content="Sneha Jadhav is a WordPress and full stack web developer in Bengaluru building fast, SEO-ready websites. Experience across 35+ live websites. Open to new opportunities and freelance projects."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-<meta property="og:title" content="Sneha Jadhav | WordPress & Full Stack Web Developer"/>
-<meta property="og:description" content="Fast, SEO-ready WordPress websites. Experience across 35+ live websites. Based in Bengaluru."/>
-<meta property="og:type" content="website"/>
-<meta name="theme-color" content="#0C0B16"/>
+  <script>document.documentElement.classList.add('js');</script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-
-<link rel="stylesheet" href="style.css"/>
-
-<script>
-document.documentElement.classList.add('js');
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sneha Jadhav",
-  "jobTitle": "WordPress & Full Stack Web Developer",
-  "email": "sj411692@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bengaluru",
-    "addressCountry": "IN"
-  },
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Koda Integrated Marketing Services"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/sneha-jadhav-designs",
-    "https://github.com/jsneha9321"
-  ]
-}
-</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sneha Jadhav",
+    "jobTitle": "WordPress & Full Stack Web Developer",
+    "email": "sj411692@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/sneha-jadhav-designs",
+      "https://github.com/jsneha9321"
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <div class="progress" id="progress"></div>
+  <div class="glow" id="glow" aria-hidden="true"></div>
+  <div class="ring" id="ring" aria-hidden="true"></div>
 
-<div class="progress" id="progress"></div>
-<div class="glow" id="glow" aria-hidden="true"></div>
-<div class="ring" id="ring" aria-hidden="true"></div>
+  <header class="header" id="top">
+    <a class="logo" href="#top" aria-label="Sneha Jadhav, home">Sneha<span>.</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact" class="nav-cta" data-magnet>Hire me</a>
+    </nav>
+  </header>
 
-<!-- HEADER -->
-<header class="header" id="top">
-  <a class="logo" href="#top" aria-label="Sneha Jadhav, home">Sneha<span>.</span></a>
-
-  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-    <span></span>
-    <span></span>
-  </button>
-
-  <nav class="nav" id="nav">
-    <a href="#services">Services</a>
-    <a href="#work">Work</a>
-    <a href="#experience">Experience</a>
-    <a href="#about">About</a>
-    <a href="#credentials">Credentials</a>
-    <a href="#contact" class="nav-cta" data-magnet>Hire me</a>
-  </nav>
-</header>
-
-<main>
-
-<!-- HERO -->
-<section class="hero">
-  <canvas class="net" id="net" aria-hidden="true"></canvas>
-
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-
-      <p class="status hl">
-        <span class="dot"></span>
-        Open to full-time roles and freelance projects
-      </p>
-
-      <h1 class="hero-title" id="heroName" aria-label="Sneha Jadhav">
-        Sneha Jadhav
-      </h1>
-
-      <p class="role hl">
-        I build <span class="typed" id="typed">WordPress websites that rank.</span><span class="caret"></span>
-      </p>
-
-      <p class="hero-lead hl">
-        WordPress and full stack developer in Bengaluru with 2+ years of experience across 35+ live websites. I build, customise and maintain fast, mobile-first sites that bring in enquiries.
-      </p>
-
-      <div class="hero-actions hl">
-        <a href="#contact" class="btn btn-solid" data-magnet>Start a project</a>
-        <a href="#work" class="btn btn-ghost" data-magnet>See my work</a>
-        <a href="sneha (1).pdf" class="btn btn-link" download>Download resume</a>
-      </div>
-
-    </div>
-
-    <div class="code-wrap" aria-hidden="true">
-      <span class="chip c1">HTML</span>
-      <span class="chip c2">JS</span>
-      <span class="chip c3">CSS</span>
-      <span class="chip c4">Figma</span>
-      <span class="chip c5">WP</span>
-
-      <div class="code hl" data-tilt>
-        <div class="code-bar">
-          <i></i><i></i><i></i>
-          <span>functions.php</span>
+  <main>
+    <section class="hero">
+      <canvas class="net" id="net" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="status hl"><span class="dot"></span>Open to full-time roles and freelance projects</p>
+          <h1 class="hero-title" id="heroName" aria-label="Sneha Jadhav">Sneha Jadhav</h1>
+          <p class="role hl">I build <span class="typed" id="typed">WordPress websites that rank.</span><span class="caret"></span></p>
+          <p class="hero-lead hl">WordPress and full stack developer in Bengaluru with 2+ years of experience across 35+ live websites. I build, customise and maintain fast, mobile-first sites that bring in enquiries.</p>
+          <div class="hero-actions hl">
+            <a href="#contact" class="btn btn-solid" data-magnet>Start a project</a>
+            <a href="#work" class="btn btn-ghost" data-magnet>See my work</a>
+            <a href="sneha%20(1).pdf" class="btn btn-link" download>Download resume</a>
+          </div>
         </div>
 
-        <pre id="codeOut"></pre>
-
-        <div class="code-foot">
-          <span>Responsive</span>
-          <span>SEO-ready</span>
-          <span>Fast</span>
+        <div class="code-wrap" aria-hidden="true">
+          <span class="chip c1">HTML</span><span class="chip c2">JS</span>
+          <span class="chip c3">CSS</span><span class="chip c4">Figma</span>
+          <span class="chip c5">WP</span>
+          <div class="code hl" data-tilt>
+            <div class="code-bar"><i></i><i></i><i></i><span>functions.php</span></div>
+            <pre id="codeOut"></pre>
+            <div class="code-foot"><span>Responsive</span><span>SEO-ready</span><span>Fast</span></div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="wrap">
-    <dl class="hero-stats hl">
-      <div>
-        <dd><span data-count="35">0</span>+</dd>
-        <dt>Live websites worked on</dt>
+      <div class="wrap">
+        <dl class="hero-stats hl">
+          <div><dd><span data-count="35">0</span>+</dd><dt>Live websites worked on</dt></div>
+          <div><dd><span data-count="2">0</span>+</dd><dt>Years of experience</dt></div>
+          <div><dd><span data-count="3">0</span></dd><dt>Companies</dt></div>
+          <div><dd><span data-count="7">0</span></dd><dt>Certifications</dt></div>
+        </dl>
       </div>
+      <div class="wall hl" aria-label="Website project previews" id="wall"></div>
+    </section>
 
-      <div>
-        <dd><span data-count="2">0</span>+</dd>
-        <dt>Years of experience</dt>
+    <div class="strip" aria-hidden="true">
+      <div class="strip-track">
+        <span>WordPress</span><span>Elementor</span><span>Gutenberg</span>
+        <span>WooCommerce</span><span>PHP</span><span>MySQL</span>
+        <span>JavaScript</span><span>Figma</span><span>Shopify</span>
+        <span>Wix</span><span>Technical SEO</span><span>Core Web Vitals</span>
+        <span>WordPress</span><span>Elementor</span><span>Gutenberg</span>
+        <span>WooCommerce</span><span>PHP</span><span>MySQL</span>
+        <span>JavaScript</span><span>Figma</span><span>Shopify</span>
+        <span>Wix</span><span>Technical SEO</span><span>Core Web Vitals</span>
       </div>
-
-      <div>
-        <dd><span data-count="3">0</span></dd>
-        <dt>Companies</dt>
-      </div>
-
-      <div>
-        <dd><span data-count="7">0</span></dd>
-        <dt>Certifications</dt>
-      </div>
-    </dl>
-  </div>
-
-  <div class="wall hl" aria-label="Screenshots of websites I have built" id="wall"></div>
-</section>
-
-<!-- TECH STRIP -->
-<div class="strip" aria-hidden="true">
-  <div class="strip-track">
-    <span>WordPress</span>
-    <span>Elementor</span>
-    <span>Gutenberg</span>
-    <span>WooCommerce</span>
-    <span>PHP</span>
-    <span>MySQL</span>
-    <span>JavaScript</span>
-    <span>Figma</span>
-    <span>Shopify</span>
-    <span>Wix</span>
-    <span>Technical SEO</span>
-    <span>Core Web Vitals</span>
-
-    <span>WordPress</span>
-    <span>Elementor</span>
-    <span>Gutenberg</span>
-    <span>WooCommerce</span>
-    <span>PHP</span>
-    <span>MySQL</span>
-    <span>JavaScript</span>
-    <span>Figma</span>
-    <span>Shopify</span>
-    <span>Wix</span>
-    <span>Technical SEO</span>
-    <span>Core Web Vitals</span>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<section class="section" id="services">
-  <div class="wrap">
-
-    <h2 class="h2 words">What I can help you with</h2>
-
-    <p class="p reveal">
-      One developer for design, code and search visibility, so your site launches ready to be found.
-    </p>
-
-    <div class="svc-grid">
-
-      <article class="svc reveal" data-tilt>
-        <span class="ico">WP</span>
-        <h3>WordPress websites</h3>
-        <p>Theme customisation, Elementor and Gutenberg layouts that are fast, responsive and easy for your team to edit.</p>
-      </article>
-
-      <article class="svc reveal" data-tilt>
-        <span class="ico">&lt;/&gt;</span>
-        <h3>Custom code blocks</h3>
-        <p>Hand-written HTML, CSS and JavaScript blocks inside WordPress pages, plus WooCommerce customisation and light PHP.</p>
-      </article>
-
-      <article class="svc reveal" data-tilt>
-        <span class="ico">SEO</span>
-        <h3>SEO and speed</h3>
-        <p>Technical and on-page SEO, Core Web Vitals and Google Analytics, so the right people find you.</p>
-      </article>
-
-      <article class="svc reveal" data-tilt>
-        <span class="ico">UI</span>
-        <h3>UI/UX design in Figma</h3>
-        <p>Wireframes and mobile-first page layouts designed to guide visitors toward one clear action.</p>
-      </article>
-
-      <article class="svc reveal" data-tilt>
-        <span class="ico">Shop</span>
-        <h3>Shopify and Wix</h3>
-        <p>Theme-based store setup and customisation, with clean product pages and mobile-friendly layouts.</p>
-      </article>
-
-      <article class="svc reveal" data-tilt>
-        <span class="ico">Fix</span>
-        <h3>Migration and maintenance</h3>
-        <p>Website migration, hosting, security, plugin updates and bug fixes without breaking what already works.</p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SELECTED WORK -->
-<section class="section" id="work">
-  <div class="wrap">
-
-    <div class="work-head">
-      <h2 class="h2 words">Selected work</h2>
-      <p class="p reveal">
-        Websites I have worked on, including client sites I maintain and update at Koda. Hover a card to scroll the preview, click to visit.
-      </p>
     </div>
 
-    <!-- PROJECT CATEGORY FILTERS -->
-    <div class="tabs reveal" id="tabs" role="tablist" aria-label="Filter projects">
+    <section class="section" id="services">
+      <div class="wrap">
+        <h2 class="h2 words">What I can help you with</h2>
+        <p class="p reveal">One developer for design, code and search visibility, so your site launches ready to be found.</p>
+        <div class="svc-grid">
+          <article class="svc reveal" data-tilt><span class="ico">WP</span><h3>WordPress websites</h3><p>Theme customisation, Elementor and Gutenberg layouts that are fast, responsive and easy for your team to edit.</p></article>
+          <article class="svc reveal" data-tilt><span class="ico">&lt;/&gt;</span><h3>Custom code blocks</h3><p>Hand-written HTML, CSS and JavaScript blocks inside WordPress pages, plus WooCommerce customisation and light PHP.</p></article>
+          <article class="svc reveal" data-tilt><span class="ico">SEO</span><h3>SEO and speed</h3><p>Technical and on-page SEO, Core Web Vitals and Google Analytics, so the right people find you.</p></article>
+          <article class="svc reveal" data-tilt><span class="ico">UI</span><h3>UI/UX design in Figma</h3><p>Wireframes and mobile-first page layouts designed to guide visitors toward one clear action.</p></article>
+          <article class="svc reveal" data-tilt><span class="ico">Shop</span><h3>Shopify and Wix</h3><p>Theme-based store setup and customisation, with clean product pages and mobile-friendly layouts.</p></article>
+          <article class="svc reveal" data-tilt><span class="ico">Fix</span><h3>Migration and maintenance</h3><p>Website migration, hosting, security, plugin updates and bug fixes without breaking what already works.</p></article>
+        </div>
+      </div>
+    </section>
 
-      <button class="tab active" data-cat="all" role="tab" aria-selected="true">
-        All
-      </button>
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="work-head">
+          <h2 class="h2 words">Selected work</h2>
+          <p class="p reveal">Websites I have worked on, including client sites I maintain and update at Koda. Hover a card to scroll the preview, click to visit.</p>
+        </div>
+        <div class="tabs reveal" id="tabs" role="tablist" aria-label="Filter projects">
+          <button class="tab active" data-cat="all" role="tab" aria-selected="true">All</button>
+          <button class="tab" data-cat="koda" role="tab" aria-selected="false">Koda clients</button>
+          <button class="tab" data-cat="corporate" role="tab" aria-selected="false">Corporate</button>
+          <button class="tab" data-cat="ecommerce" role="tab" aria-selected="false">E-commerce</button>
+          <button class="tab" data-cat="education" role="tab" aria-selected="false">Education</button>
+          <button class="tab" data-cat="other" role="tab" aria-selected="false">More</button>
+          <button class="tab" data-cat="personal" role="tab" aria-selected="false">Personal Projects</button>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
 
-      <button class="tab" data-cat="koda" role="tab" aria-selected="false">
-        Koda clients
-      </button>
+    <section class="section" id="experience">
+      <div class="wrap">
+        <h2 class="h2 words">Experience</h2>
+        <ol class="timeline">
+          <li class="job reveal current">
+            <div class="job-meta"><span>May 2026 to present</span><span>Bengaluru, on-site</span></div>
+            <div class="job-main">
+              <h3>WordPress Developer, Full Stack</h3><p class="job-co">Koda Integrated Marketing Services</p>
+              <ul>
+                <li>Maintain, update and improve live websites for multiple client brands, including Koda, MeritTrac, Greytt.ai and Entermind.</li>
+                <li>Customise page layouts and sections using Elementor and Gutenberg, with PHP for smaller tweaks and WooCommerce changes.</li>
+                <li>Write and manage custom HTML, CSS and JavaScript blocks embedded in client pages.</li>
+                <li>Fix bugs and improve responsiveness and technical SEO on existing sites.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job reveal">
+            <div class="job-meta"><span>May 2025 to May 2026</span><span>Bengaluru, on-site</span></div>
+            <div class="job-main">
+              <h3>Web Developer</h3><p class="job-co">Digital Pitha</p>
+              <ul>
+                <li>Developed responsive, SEO-optimised websites in WordPress, HTML, CSS and JavaScript.</li>
+                <li>Designed UI wireframes and page layouts in Figma.</li>
+                <li>Improved Core Web Vitals and SEO scores on client sites.</li>
+                <li>Customised theme-based Shopify and Wix stores; integrated APIs and analytics tools.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job reveal">
+            <div class="job-meta"><span>Dec 2023 to May 2025</span><span>Bengaluru, on-site</span></div>
+            <div class="job-main">
+              <h3>Web Developer</h3><p class="job-co">Shanthatech Digital Solutions</p>
+              <ul>
+                <li>Built custom website layouts and UI components in HTML, CSS and JavaScript.</li>
+                <li>Managed WordPress updates, plugins, security, bug fixes and performance issues.</li>
+                <li>Handled website migration and hosting; tuned speed and cross-browser performance.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-      <button class="tab" data-cat="corporate" role="tab" aria-selected="false">
-        Corporate
-      </button>
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div>
+          <h2 class="h2 words">A developer who cares how it ranks and feels.</h2>
+          <p class="p reveal">I'm a WordPress and full stack web developer with 2+ years of experience working on responsive, SEO-friendly websites for corporate, e-commerce, education, tech and real estate clients.</p>
+          <p class="p reveal">My day to day is customising themes, Elementor and Gutenberg layouts, WooCommerce features, and hand-written code where page builders fall short. I back it up with Core Web Vitals work, technical SEO and a clean handover.</p>
+          <p class="p reveal">Based in Bengaluru. Open to on-site, hybrid and remote roles.</p>
+        </div>
+        <div class="skills reveal">
+          <div class="skill-group"><h3>WordPress and backend</h3><ul><li>WordPress</li><li>Elementor</li><li>Gutenberg</li><li>WooCommerce</li><li>PHP (basic to intermediate)</li><li>MySQL</li><li>REST APIs</li><li>AJAX</li></ul></div>
+          <div class="skill-group"><h3>Front end and design</h3><ul><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Responsive design</li><li>Figma</li><li>Mobile web design</li></ul></div>
+          <div class="skill-group"><h3>Other platforms</h3><ul><li>Shopify (themes)</li><li>Wix</li><li>GitHub</li><li>Website migration</li><li>Hosting</li></ul></div>
+          <div class="skill-group"><h3>SEO and performance</h3><ul><li>Technical SEO</li><li>On-page SEO</li><li>Core Web Vitals</li><li>Google Analytics</li><li>Semrush</li></ul></div>
+        </div>
+      </div>
+    </section>
 
-      <button class="tab" data-cat="ecommerce" role="tab" aria-selected="false">
-        E-commerce
-      </button>
+    <section class="section" id="credentials">
+      <div class="wrap">
+        <h2 class="h2 words">Education and certifications</h2>
+        <div class="edu-row">
+          <div class="edu reveal"><h3>Bachelor of Science (B.Sc)</h3><p>Shri K.A. Lokapur Degree College, Athani</p><p class="sm">2019 to 2022 · Grade A+ (93%)</p></div>
+          <div class="edu reveal"><h3>Pre-University Course</h3><p>Shri Banjawad Residential PU College, Athani</p><p class="sm">2017 to 2019</p></div>
+        </div>
+        <div class="cert-grid">
+          <article class="cert reveal" data-tilt><span class="cert-date">Apr 2026</span><h3>SEO Specialist for Web Developer</h3><p>Training Academy and Learning Labs</p></article>
+          <article class="cert reveal" data-tilt><span class="cert-date">Mar 2026</span><h3>Technical SEO and AI Search Essentials</h3><p>Semrush Academy</p></article>
+          <article class="cert reveal" data-tilt><span class="cert-date">Mar 2026</span><h3>Content Marketing Essentials for SEO and AI Search</h3><p>Semrush Academy</p></article>
+          <article class="cert reveal" data-tilt><span class="cert-date">Mar 2026</span><h3>SEO Essentials with Semrush</h3><p>Semrush Academy</p></article>
+          <article class="cert reveal" data-tilt><span class="cert-date">Oct 2025</span><h3>Advanced Google Analytics</h3><p>Google Analytics Academy</p></article>
+          <article class="cert reveal" data-tilt><span class="cert-date">Oct 2025</span><h3>Google Analytics for Beginners</h3><p>Google Analytics Academy</p></article>
+          <article class="cert reveal" data-tilt><span class="cert-date">Jun 2023</span><h3>Java Full Stack</h3><p>JSpiders, Training and Development Center</p></article>
+        </div>
+      </div>
+    </section>
 
-      <button class="tab" data-cat="education" role="tab" aria-selected="false">
-        Education
-      </button>
+    <section class="section" id="process">
+      <div class="wrap">
+        <h2 class="h2 words">How a project runs</h2>
+        <ol class="steps">
+          <li class="reveal"><span class="n">1</span><h3>Discover</h3><p>We agree goals, audience, pages and content before any design starts.</p></li>
+          <li class="reveal"><span class="n">2</span><h3>Design</h3><p>Wireframes and mobile-first layouts in Figma, reviewed with you.</p></li>
+          <li class="reveal"><span class="n">3</span><h3>Build</h3><p>WordPress with custom code where it matters, tested on real devices.</p></li>
+          <li class="reveal"><span class="n">4</span><h3>Launch and grow</h3><p>SEO, speed and analytics set up at launch, with support after.</p></li>
+        </ol>
+      </div>
+    </section>
 
-      <button class="tab" data-cat="other" role="tab" aria-selected="false">
-        More
-      </button>
-
-      <!-- NEW PERSONAL PROJECTS CATEGORY -->
-      <button class="tab" data-cat="personal" role="tab" aria-selected="false">
-        Personal Projects
-      </button>
-
-    </div>
-
-    <!-- PROJECT CARDS ARE RENDERED BY script.js -->
-    <div class="grid" id="grid"></div>
-
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="section" id="experience">
-  <div class="wrap">
-
-    <h2 class="h2 words">Experience</h2>
-
-    <ol class="timeline">
-
-      <li class="job reveal current">
-        <div class="job-meta">
-          <span>May 2026 to present</span>
-          <span>Bengaluru, on-site</span>
+    <section class="section contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 class="contact-title words">Have a site to build or a role to fill?</h2>
+          <p class="p reveal">I'm open to full-time roles, freelance projects and collaborations. Tell me what you need and I'll reply within a day.</p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/sneha-jadhav-designs" target="_blank" rel="noopener noreferrer" data-magnet>LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/jsneha9321" target="_blank" rel="noopener noreferrer" data-magnet>GitHub</a>
+          </div>
+          <p class="sm reveal">sj411692@gmail.com · Bengaluru, India</p>
         </div>
 
-        <div class="job-main">
-          <h3>WordPress Developer, Full Stack</h3>
-          <p class="job-co">Koda Integrated Marketing Services</p>
+        <form class="form reveal" id="leadForm" novalidate>
+          <h3 class="form-title">Send me a message</h3>
+          <p class="sm">Tell me about your project or role. I reply within a day.</p>
+          <input type="hidden" name="_subject" value="New enquiry from portfolio">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
 
-          <ul>
-            <li>Maintain, update and improve live websites for multiple client brands, including Koda, MeritTrac, Greytt.ai and Entermind.</li>
-            <li>Customise page layouts and sections using Elementor and Gutenberg, with PHP for smaller tweaks and WooCommerce changes.</li>
-            <li>Write and manage custom HTML, CSS and JavaScript blocks embedded in client pages.</li>
-            <li>Fix bugs and improve responsiveness and technical SEO on existing sites.</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="job reveal">
-        <div class="job-meta">
-          <span>May 2025 to May 2026</span>
-          <span>Bengaluru, on-site</span>
-        </div>
-
-        <div class="job-main">
-          <h3>Web Developer</h3>
-          <p class="job-co">Digital Pitha</p>
-
-          <ul>
-            <li>Developed responsive, SEO-optimised websites in WordPress, HTML, CSS and JavaScript.</li>
-            <li>Designed UI wireframes and page layouts in Figma.</li>
-            <li>Improved Core Web Vitals and SEO scores on client sites.</li>
-            <li>Customised theme-based Shopify and Wix stores; integrated APIs and analytics tools.</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="job reveal">
-        <div class="job-meta">
-          <span>Dec 2023 to May 2025</span>
-          <span>Bengaluru, on-site</span>
-        </div>
-
-        <div class="job-main">
-          <h3>Web Developer</h3>
-          <p class="job-co">Shanthatech Digital Solutions</p>
-
-          <ul>
-            <li>Built custom website layouts and UI components in HTML, CSS and JavaScript.</li>
-            <li>Managed WordPress updates, plugins, security, bug fixes and performance issues.</li>
-            <li>Handled website migration and hosting; tuned speed and cross-browser performance.</li>
-          </ul>
-        </div>
-      </li>
-
-    </ol>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-  <div class="wrap about">
-
-    <div>
-      <h2 class="h2 words">A developer who cares how it ranks and feels.</h2>
-
-      <p class="p reveal">
-        I'm a WordPress and full stack web developer with 2+ years of experience working on responsive, SEO-friendly websites for corporate, e-commerce, education, tech and real estate clients.
-      </p>
-
-      <p class="p reveal">
-        My day to day is customising themes, Elementor and Gutenberg layouts, WooCommerce features, and hand-written code where page builders fall short. I back it up with Core Web Vitals work, technical SEO and a clean handover.
-      </p>
-
-      <p class="p reveal">
-        Based in Bengaluru. Open to on-site, hybrid and remote roles.
-      </p>
-    </div>
-
-    <div class="skills reveal">
-
-      <div class="skill-group">
-        <h3>WordPress and backend</h3>
-        <ul>
-          <li>WordPress</li>
-          <li>Elementor</li>
-          <li>Gutenberg</li>
-          <li>WooCommerce</li>
-          <li>PHP (basic to intermediate)</li>
-          <li>MySQL</li>
-          <li>REST APIs</li>
-          <li>AJAX</li>
-        </ul>
+          <label>Your name<input name="name" required autocomplete="name" placeholder="Enter name"></label>
+          <label>Your email<input name="email" type="email" required autocomplete="email" placeholder="you@company.com"></label>
+          <label>What do you need?
+            <select name="type">
+              <option>New website</option>
+              <option>Website redesign</option>
+              <option>WooCommerce or Shopify store</option>
+              <option>SEO and speed improvements</option>
+              <option>Full-time role</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>Project details<textarea name="msg" rows="4" required placeholder="What are you looking to build or hire for?"></textarea></label>
+          <button class="btn btn-solid" type="submit" data-magnet>Send message</button>
+          <p class="sm form-note" id="formNote" aria-live="polite"></p>
+        </form>
       </div>
+    </section>
+  </main>
 
-      <div class="skill-group">
-        <h3>Front end and design</h3>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript</li>
-          <li>Responsive design</li>
-          <li>Figma</li>
-          <li>Mobile web design</li>
-        </ul>
-      </div>
+  <footer class="footer">
+    <div class="wrap foot"><span class="logo">Sneha<span>.</span></span><span class="sm">© 2026 Sneha Jadhav</span></div>
+  </footer>
+  <a href="#contact" class="fab" data-magnet>Hire me</a>
 
-      <div class="skill-group">
-        <h3>Other platforms</h3>
-        <ul>
-          <li>Shopify (themes)</li>
-          <li>Wix</li>
-          <li>GitHub</li>
-          <li>Website migration</li>
-          <li>Hosting</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <h3>SEO and performance</h3>
-        <ul>
-          <li>Technical SEO</li>
-          <li>On-page SEO</li>
-          <li>Core Web Vitals</li>
-          <li>Google Analytics</li>
-          <li>Semrush</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION AND CERTIFICATIONS -->
-<section class="section" id="credentials">
-  <div class="wrap">
-
-    <h2 class="h2 words">Education and certifications</h2>
-
-    <div class="edu-row">
-
-      <div class="edu reveal">
-        <h3>Bachelor of Science (B.Sc)</h3>
-        <p>Shri K.A. Lokapur Degree College, Athani</p>
-        <p class="sm">2019 to 2022 &middot; Grade A+ (93%)</p>
-      </div>
-
-      <div class="edu reveal">
-        <h3>Pre-University Course</h3>
-        <p>Shri Banjawad Residential PU College, Athani</p>
-        <p class="sm">2017 to 2019</p>
-      </div>
-
-    </div>
-
-    <div class="cert-grid">
-
-      <article class="cert reveal" data-tilt>
-        <span class="cert-date">Apr 2026</span>
-        <h3>SEO Specialist for Web Developer</h3>
-        <p>Training Academy and Learning Labs</p>
-      </article>
-
-      <article class="cert reveal" data-tilt>
-        <span class="cert-date">Mar 2026</span>
-        <h3>Technical SEO and AI Search Essentials</h3>
-        <p>Semrush Academy</p>
-      </article>
-
-      <article class="cert reveal" data-tilt>
-        <span class="cert-date">Mar 2026</span>
-        <h3>Content Marketing Essentials for SEO and AI Search</h3>
-        <p>Semrush Academy</p>
-      </article>
-
-      <article class="cert reveal" data-tilt>
-        <span class="cert-date">Mar 2026</span>
-        <h3>SEO Essentials with Semrush</h3>
-        <p>Semrush Academy</p>
-      </article>
-
-      <article class="cert reveal" data-tilt>
-        <span class="cert-date">Oct 2025</span>
-        <h3>Advanced Google Analytics</h3>
-        <p>Google Analytics Academy</p>
-      </article>
-
-      <article class="cert reveal" data-tilt>
-        <span class="cert-date">Oct 2025</span>
-        <h3>Google Analytics for Beginners</h3>
-        <p>Google Analytics Academy</p>
-      </article>
-
-      <article class="cert reveal" data-tilt>
-        <span class="cert-date">Jun 2023</span>
-        <h3>Java Full Stack</h3>
-        <p>JSpiders, Training and Development Center</p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECT PROCESS -->
-<section class="section" id="process">
-  <div class="wrap">
-
-    <h2 class="h2 words">How a project runs</h2>
-
-    <ol class="steps">
-
-      <li class="reveal">
-        <span class="n">1</span>
-        <h3>Discover</h3>
-        <p>We agree goals, audience, pages and content before any design starts.</p>
-      </li>
-
-      <li class="reveal">
-        <span class="n">2</span>
-        <h3>Design</h3>
-        <p>Wireframes and mobile-first layouts in Figma, reviewed with you.</p>
-      </li>
-
-      <li class="reveal">
-        <span class="n">3</span>
-        <h3>Build</h3>
-        <p>WordPress with custom code where it matters, tested on real devices.</p>
-      </li>
-
-      <li class="reveal">
-        <span class="n">4</span>
-        <h3>Launch and grow</h3>
-        <p>SEO, speed and analytics set up at launch, with support after.</p>
-      </li>
-
-    </ol>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-  <div class="wrap contact-grid">
-
-    <div>
-      <h2 class="contact-title words">Have a site to build or a role to fill?</h2>
-
-      <p class="p reveal">
-        I'm open to full-time roles, freelance projects and collaborations. Tell me what you need and I'll reply within a day.
-      </p>
-
-      <div class="hero-actions reveal">
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/sneha-jadhav-designs" target="_blank" rel="noopener noreferrer" data-magnet>LinkedIn</a>
-
-        <a class="btn btn-ghost" href="https://github.com/jsneha9321" target="_blank" rel="noopener noreferrer" data-magnet>GitHub</a>
-      </div>
-
-      <p class="sm reveal">sj411692@gmail.com &middot; Bengaluru, India</p>
-    </div>
-
-    <form class="form reveal" id="leadForm" novalidate>
-
-      <h3 class="form-title">Send me a message</h3>
-      <p class="sm">Tell me about your project or role. I reply within a day.</p>
-
-      <input type="hidden" name="_subject" value="New enquiry from portfolio"/>
-
-      <input
-        type="text"
-        name="_gotcha"
-        tabindex="-1"
-        autocomplete="off"
-        class="hp"
-        aria-hidden="true"
-      />
-
-      <label>
-        Your name
-        <input name="name" required autocomplete="name" placeholder="Enter name"/>
-      </label>
-
-      <label>
-        Your email
-        <input name="email" type="email" required autocomplete="email" placeholder="you@company.com"/>
-      </label>
-
-      <label>
-        What do you need?
-        <select name="type">
-          <option>New website</option>
-          <option>Website redesign</option>
-          <option>WooCommerce or Shopify store</option>
-          <option>SEO and speed improvements</option>
-          <option>Full-time role</option>
-          <option>Something else</option>
-        </select>
-      </label>
-
-      <label>
-        Project details
-        <textarea name="msg" rows="4" required placeholder="What are you looking to build or hire for?"></textarea>
-      </label>
-
-      <button class="btn btn-solid" type="submit" data-magnet>
-        Send message
-      </button>
-
-      <p class="sm form-note" id="formNote" aria-live="polite"></p>
-
-    </form>
-  </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="wrap foot">
-    <span class="logo">Sneha<span>.</span></span>
-    <span class="sm">&copy; 2026 Sneha Jadhav</span>
-  </div>
-</footer>
-
-<a href="#contact" class="fab" data-magnet>Hire me</a>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
